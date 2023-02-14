@@ -4,14 +4,38 @@ const header= document.getElementById("main-header")
 header.style.border="2px solid black"
 const addItem = document.getElementsByClassName("title")
 addItem[0].style.fontWeight="Bold"
-addItem[0].style.color="#008000"
+// addItem[0].style.color="#008000"
 // const items= document.getElementsByClassName("list-group-item")
 // items[2].style.backgroundColor="#008000"
 // for(let i=0 ;i<items.length;i++){
 //     items[i].style.fontWeight="bold"
 // }
-const li = document.getElementsByTagName("li")
-li[2].style.backgroundColor="#008000"
-for(let i=0 ;i<li.length;i++){
-    li[i].style.fontWeight="bold"
+// const li = document.getElementsByTagName("li")
+// // li[2].style.backgroundColor="#008000"
+// for(let i=0 ;i<li.length;i++){
+//     li[i].style.fontWeight="bold"
+// }
+const item2= document.querySelector(".list-group-item:nth-child(2)");
+item2.style.backgroundColor="#00FF00"
+const item3 = document.querySelector(".list-group-item:nth-child(3)");
+item3.style.display="none" 
+
+
+//Queryselectorall
+const items=document.querySelectorAll("li")
+items.forEach(key=>{
+   if(key.textContent=="Item 2"){
+     key.style.color="green"
+   }
+
+})
+
+for(let i=0;i<items.length;i++){
+    if(i%2==0){
+        items[i].style.backgroundColor="#7CFC00"
+    }
+    
 }
+// for (const itr in items) {
+//     console.log(itr)
+// }
